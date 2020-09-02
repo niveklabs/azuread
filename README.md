@@ -3,7 +3,7 @@
 [embedmd]:# (azuread.tf)
 ```tf
 provider "azuread" {
-  version = "0.10.0"
+  version = "0.11.0"
 
   # client_certificate_password - (optional) is a type of string
   client_certificate_password = null

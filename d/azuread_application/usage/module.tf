@@ -1,6 +1,8 @@
 module "azuread_application" {
   source = "./modules/azuread/d/azuread_application"
 
+  # application_id - (optional) is a type of string
+  application_id = null
   # name - (optional) is a type of string
   name = null
   # object_id - (optional) is a type of string

@@ -28,6 +28,8 @@ module "azuread_application" {
   }]
   # owners - (optional) is a type of set of string
   owners = []
+  # prevent_duplicate_names - (optional) is a type of bool
+  prevent_duplicate_names = null
   # public_client - (optional) is a type of bool
   public_client = null
   # reply_urls - (optional) is a type of set of string

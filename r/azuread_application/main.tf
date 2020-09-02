@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    azuread = ">= 0.10.0"
+    azuread = ">= 0.11.0"
   }
 }
 
@@ -14,6 +14,7 @@ resource "azuread_application" "this" {
   oauth2_allow_implicit_flow = var.oauth2_allow_implicit_flow
   oauth2_permissions         = var.oauth2_permissions
   owners                     = var.owners
+  prevent_duplicate_names    = var.prevent_duplicate_names
   public_client              = var.public_client
   reply_urls                 = var.reply_urls
   type                       = var.type

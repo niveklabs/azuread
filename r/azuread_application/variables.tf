@@ -62,6 +62,12 @@ variable "owners" {
   default     = null
 }
 
+variable "prevent_duplicate_names" {
+  description = "(optional)"
+  type        = bool
+  default     = null
+}
+
 variable "public_client" {
   description = "(optional)"
   type        = bool

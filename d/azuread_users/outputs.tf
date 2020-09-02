@@ -18,6 +18,11 @@ output "user_principal_names" {
   value       = data.azuread_users.this.user_principal_names
 }
 
+output "users" {
+  description = "returns a list of object"
+  value       = data.azuread_users.this.users
+}
+
 output "this" {
   value = azuread_users.this
 }

@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    azuread = ">= 0.10.0"
+    azuread = ">= 0.11.0"
   }
 }
 

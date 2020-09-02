@@ -9,4 +9,6 @@ module "azuread_group" {
   name = null
   # owners - (optional) is a type of set of string
   owners = []
+  # prevent_duplicate_names - (optional) is a type of bool
+  prevent_duplicate_names = null
 }

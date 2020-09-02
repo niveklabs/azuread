@@ -1,12 +1,13 @@
 terraform {
   required_providers {
-    azuread = ">= 0.10.0"
+    azuread = ">= 0.11.0"
   }
 }
 
 data "azuread_application" "this" {
-  name      = var.name
-  object_id = var.object_id
+  application_id = var.application_id
+  name           = var.name
+  object_id      = var.object_id
 
   dynamic "oauth2_permissions" {
     for_each = var.oauth2_permissions

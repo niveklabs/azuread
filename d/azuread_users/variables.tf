@@ -1,3 +1,9 @@
+variable "ignore_missing" {
+  description = "(optional)"
+  type        = bool
+  default     = null
+}
+
 variable "mail_nicknames" {
   description = "(optional)"
   type        = list(string)
