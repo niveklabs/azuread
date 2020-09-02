@@ -39,6 +39,23 @@ variable "oauth2_allow_implicit_flow" {
   default     = null
 }
 
+variable "oauth2_permissions" {
+  description = "(optional)"
+  type = set(object(
+    {
+      admin_consent_description  = string
+      admin_consent_display_name = string
+      id                         = string
+      is_enabled                 = bool
+      type                       = string
+      user_consent_description   = string
+      user_consent_display_name  = string
+      value                      = string
+    }
+  ))
+  default = null
+}
+
 variable "owners" {
   description = "(optional)"
   type        = set(string)
@@ -78,18 +95,26 @@ variable "app_role" {
   default = []
 }
 
-variable "oauth2_permissions" {
-  description = "nested mode: NestingList, min items: 0, max items: 0"
+variable "optional_claims" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
   type = set(object(
     {
-      admin_consent_description  = string
-      admin_consent_display_name = string
-      id                         = string
-      is_enabled                 = bool
-      type                       = string
-      user_consent_description   = string
-      user_consent_display_name  = string
-      value                      = string
+      access_token = list(object(
+        {
+          additional_properties = list(string)
+          essential             = bool
+          name                  = string
+          source                = string
+        }
+      ))
+      id_token = list(object(
+        {
+          additional_properties = list(string)
+          essential             = bool
+          name                  = string
+          source                = string
+        }
+      ))
     }
   ))
   default = []

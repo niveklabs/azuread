@@ -1,7 +1,6 @@
-variable "description" {
-  description = "(optional)"
+variable "application_object_id" {
+  description = "(required)"
   type        = string
-  default     = null
 }
 
 variable "end_date" {
@@ -22,12 +21,13 @@ variable "key_id" {
   default     = null
 }
 
-variable "service_principal_id" {
-  description = "(required)"
+variable "start_date" {
+  description = "(optional)"
   type        = string
+  default     = null
 }
 
-variable "start_date" {
+variable "type" {
   description = "(optional)"
   type        = string
   default     = null

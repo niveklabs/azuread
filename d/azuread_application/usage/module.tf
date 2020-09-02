@@ -16,4 +16,19 @@ module "azuread_application" {
     user_consent_display_name  = null
     value                      = null
   }]
+
+  optional_claims = [{
+    access_token = [{
+      additional_properties = []
+      essential             = null
+      name                  = null
+      source                = null
+    }]
+    id_token = [{
+      additional_properties = []
+      essential             = null
+      name                  = null
+      source                = null
+    }]
+  }]
 }

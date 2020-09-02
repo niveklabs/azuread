@@ -1,3 +1,8 @@
+output "description" {
+  description = "returns a string"
+  value       = azuread_service_principal_password.this.description
+}
+
 output "end_date" {
   description = "returns a string"
   value       = azuread_service_principal_password.this.end_date

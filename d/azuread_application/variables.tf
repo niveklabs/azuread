@@ -27,3 +27,28 @@ variable "oauth2_permissions" {
   default = []
 }
 
+variable "optional_claims" {
+  description = "nested mode: NestingList, min items: 0, max items: 1"
+  type = set(object(
+    {
+      access_token = list(object(
+        {
+          additional_properties = list(string)
+          essential             = bool
+          name                  = string
+          source                = string
+        }
+      ))
+      id_token = list(object(
+        {
+          additional_properties = list(string)
+          essential             = bool
+          name                  = string
+          source                = string
+        }
+      ))
+    }
+  ))
+  default = []
+}
+

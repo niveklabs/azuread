@@ -1,9 +1,3 @@
-variable "description" {
-  description = "(optional)"
-  type        = string
-  default     = null
-}
-
 variable "end_date" {
   description = "(optional)"
   type        = string
@@ -28,6 +22,12 @@ variable "service_principal_id" {
 }
 
 variable "start_date" {
+  description = "(optional)"
+  type        = string
+  default     = null
+}
+
+variable "type" {
   description = "(optional)"
   type        = string
   default     = null

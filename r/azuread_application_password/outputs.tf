@@ -8,6 +8,11 @@ output "application_object_id" {
   value       = azuread_application_password.this.application_object_id
 }
 
+output "description" {
+  description = "returns a string"
+  value       = azuread_application_password.this.description
+}
+
 output "end_date" {
   description = "returns a string"
   value       = azuread_application_password.this.end_date

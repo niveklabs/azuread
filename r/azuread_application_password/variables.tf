@@ -10,6 +10,12 @@ variable "application_object_id" {
   default     = null
 }
 
+variable "description" {
+  description = "(optional)"
+  type        = string
+  default     = null
+}
+
 variable "end_date" {
   description = "(optional)"
   type        = string

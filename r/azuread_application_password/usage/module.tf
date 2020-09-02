@@ -5,6 +5,8 @@ module "azuread_application_password" {
   application_id = null
   # application_object_id - (optional) is a type of string
   application_object_id = null
+  # description - (optional) is a type of string
+  description = null
   # end_date - (optional) is a type of string
   end_date = null
   # end_date_relative - (optional) is a type of string

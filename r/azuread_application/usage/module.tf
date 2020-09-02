@@ -15,6 +15,17 @@ module "azuread_application" {
   name = null
   # oauth2_allow_implicit_flow - (optional) is a type of bool
   oauth2_allow_implicit_flow = null
+  # oauth2_permissions - (optional) is a type of set of object
+  oauth2_permissions = [{
+    admin_consent_description  = null
+    admin_consent_display_name = null
+    id                         = null
+    is_enabled                 = null
+    type                       = null
+    user_consent_description   = null
+    user_consent_display_name  = null
+    value                      = null
+  }]
   # owners - (optional) is a type of set of string
   owners = []
   # public_client - (optional) is a type of bool
@@ -33,15 +44,19 @@ module "azuread_application" {
     value                = null
   }]
 
-  oauth2_permissions = [{
-    admin_consent_description  = null
-    admin_consent_display_name = null
-    id                         = null
-    is_enabled                 = null
-    type                       = null
-    user_consent_description   = null
-    user_consent_display_name  = null
-    value                      = null
+  optional_claims = [{
+    access_token = [{
+      additional_properties = []
+      essential             = null
+      name                  = null
+      source                = null
+    }]
+    id_token = [{
+      additional_properties = []
+      essential             = null
+      name                  = null
+      source                = null
+    }]
   }]
 
   required_resource_access = [{

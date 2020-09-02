@@ -18,6 +18,11 @@ output "identifier_uris" {
   value       = azuread_application.this.identifier_uris
 }
 
+output "oauth2_permissions" {
+  description = "returns a set of object"
+  value       = azuread_application.this.oauth2_permissions
+}
+
 output "object_id" {
   description = "returns a string"
   value       = azuread_application.this.object_id
